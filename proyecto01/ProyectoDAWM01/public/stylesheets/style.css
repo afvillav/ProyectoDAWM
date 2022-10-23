@@ -5,3 +5,33 @@
 a {
   color: #00B7FF;
 }
+
+p {
+  text-indent: 30px;
+}
+
+div#acerca{
+  display: flex;
+  justify-content:space-around;
+}
+
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+section#pAcerca{
+  width: 33%;
+  border: 5px outset red;
+  align-self:center;
+}
+section#mifoto{
+  width: 17%;
+  border: 5px outset red;
+}
+section#habilidades{
+  width: 33%;
+  border: 5px outset red;
+  align-self:center;
+}
