@@ -2,6 +2,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+
 a {
   color: #00B7FF;
 }
@@ -35,3 +36,10 @@ section#habilidades{
   border: 5px outset red;
   align-self:center;
 }
+
+div#lenguajes{
+  display: flex;
+  justify-content: space-around;
+}
+
+
