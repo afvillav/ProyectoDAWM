@@ -2,6 +2,9 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html,body,header,footer{
+  background-color: #92b4e8;
+}
 
 a {
   color: #00B7FF;
@@ -24,17 +27,19 @@ h2{
 }
 section#pAcerca{
   width: 33%;
-  border: 5px outset red;
+  border: 5px outset #294c60;
   align-self:center;
+  background-color: #7889F8;
 }
 section#mifoto{
   width: 17%;
-  border: 5px outset red;
+  border: 5px outset #294c60;
 }
 section#habilidades{
   width: 33%;
-  border: 5px outset red;
+  border: 5px outset #294c60;
   align-self:center;
+  background-color: #7889F8;
 }
 
 div#lenguajes{
@@ -46,5 +51,48 @@ div#video{
   display: flex;
   justify-content: space-around;
 }
+
+section#ultseccion{
+  display: flex;
+  justify-content: space-around;
+}
+
+div#ubi{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+div#pie{
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  margin-top: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #4F6FE0;
+  color: #001B2E;
+  text-align: center;
+  font-size: 20px;
+}
+
+h3{
+  color: white;
+  margin-top: 0.60rem;
+  margin-bottom: 0.60rem;
+}
+
+h2{
+  margin-top: 0.80rem;
+  margin-bottom: 0.80rem;
+}
+
+h2{
+  margin-top: 0.60rem;
+  margin-bottom: 0.60rem;
+}
+
 
 
