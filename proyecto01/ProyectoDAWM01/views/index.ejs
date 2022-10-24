@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -12,6 +13,15 @@
       <h1>Alan Villavicencio</h1></div>
     </div>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      /* Smartphones (portrait and landscape) ———– */
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      /* Styles */
+        }
+      @media (min-width: 640px) { body {font-size:1rem;} }
+      @media (min-width:960px) { body {font-size:1.2rem;} }
+      @media (min-width:1100px) { body {font-size:1.5rem;} }
+    </style>
   </head>
   <nav>
     <h2>Acerca de</h2>
@@ -81,7 +91,7 @@
       </section>
     </div>
     </section>
-    <section>
+    <section id="vid">
       <h2>Video sobre mi</h2>
     <div id="video">
       <video width="320" height="240" controls="yes">
@@ -89,33 +99,36 @@
       </video>
     </div>
     </section>
-    <section id="ultseccion">
+    <section id="mapa">
     <div id="ubi">
       <h2>Donde encontrarme</h2><br>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0236659024326!2d-79.97007248465559!3d-2.1446206377710255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d7303bb0133cd%3A0x66c18bd9810f31cb!2sFacultad%20de%20Ingenier%C3%ADa%20en%20Electricidad%20y%20Computaci%C3%B3n%20FIEC%20-%20ESPOL!5e0!3m2!1ses-419!2sec!4v1666568283848!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <div id="contactame">
-      <h2>Contactame</h2><br>
-      <form id="formulario">
-        <label for="nombre">Nombre y apellido:</label><br><input id="nombre" name="nombre" required="required" size="50"><br>
-        <label for="asunto">Asunto:</label><br><input id="asunto" name="asunto" required="required" size="50"><br>
-        <label for="correo">Correo electronico:</label><br><input id="correo" name="correo" required="required" size="50"><br>
-        <label for="mensaje">Mensaje:</label><br><textarea id="mensaje" name="mensaje" rows="10" cols="50"></textarea><br>
-        <button type="submit" name="enviar">Enviar</button>
-        <button type="reset" name="reiniciar">Cancelar</button>
-      </form>
-    </div>
+    </section>
+    <section id="contacto">
+      <div id="contactame">
+        <h2>Contactame</h2><br>
+        <form id="formulario">
+          <label for="nombre">Nombre y apellido:</label><br><input id="nombre" name="nombre" required="required" size="40"><br>
+          <label for="asunto">Asunto:</label><br><input id="asunto" name="asunto" required="required" size="40"><br>
+          <label for="correo">Correo electronico:</label><br><input id="correo" name="correo" required="required" size="40"><br>
+          <label for="mensaje">Mensaje:</label><br><textarea id="mensaje" name="mensaje" rows="10" cols="40"></textarea><br>
+          <button type="submit" name="enviar">Enviar</button>
+          <button type="reset" name="reiniciar">Cancelar</button>
+        </form>
+      </div>
     </section>
   </body>
   <footer>
-    <div id="pie">
-      <h3>Encuentrame en:</h3>
+    <div class="pie">
+      <p>Encuentrame en:
       <a href="https://www.linkedin.com/in/alan-villavicencio-51a040232/">
-        <img border="0" alt="linkedin" src="media/linkedin-logo-png-1840.png" width="250" height="50">
+        <img border="0" alt="linkedin" src="media/174857.png" width="100" height="50">
       </a>
       <a href="https://github.com/afvillav">
         <img border="0" alt="github" src="media/pngegg.png" width="100" height="50">
       </a>
+    </p>
     </div>
   </footer>
 </html>
