@@ -6,12 +6,20 @@ html,body,header,footer{
   background-color: #92b4e8;
 }
 
+* , *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 a {
   color: #00B7FF;
 }
 
 p {
   text-indent: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
 img, video {
