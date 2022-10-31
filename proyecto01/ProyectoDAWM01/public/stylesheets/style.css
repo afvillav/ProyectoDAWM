@@ -92,6 +92,7 @@ video{
 div#acerca{
   display: flex;
   justify-content:space-around;
+  padding:10px;
 }
 
 h1{
