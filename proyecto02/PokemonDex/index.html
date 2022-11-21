@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Material Design for Bootstrap</title>
+  <title>PokemonDex</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
   <!-- Google Fonts Roboto -->
@@ -26,7 +26,7 @@
       <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
           <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
-            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Regiones</span>
+            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Regions</span>
           </a>
           <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
             <i class="fas fa-chart-area fa-fw me-3"></i><span>Pokemon</span>
@@ -53,9 +53,9 @@
         </a>
         <!-- Search form -->
         <form class="d-none d-md-flex input-group w-auto my-auto">
-          <input autocomplete="off" type="search" class="form-control rounded"
-            placeholder='Buscar Pokemon' style="min-width: 225px" />
-          <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
+          <input id="busqueda" autocomplete="off" type="text" class="form-control rounded"
+            placeholder='Search Pokemon' style="min-width: 225px" />
+          <button type="button" onclick="mostrar()">Search</button>
         </form>
       </div>
     </nav>
@@ -67,15 +67,7 @@
   <main style="margin-top: 58px">
     <div class="container pt-4">
       <!-- Section: Main chart -->
-      <section class="mb-4">
-        <div class="card">
-          <div class="card-header py-3">
-            <h5 class="mb-0 text-center"><strong>Sales</strong></h5>
-          </div>
-          <div class="card-body">
-            <canvas class="my-4 w-100" id="myChart" height="380"></canvas>
-          </div>
-        </div>
+      <section id="tarjetaPoke" class="mb-4">
       </section>
       <!-- Section: Main chart -->
 
@@ -84,7 +76,7 @@
         <div class="card">
           <div class="card-header text-center py-3">
             <h5 class="mb-0 text-center">
-              <strong>Sales Performance KPIs</strong>
+              <strong>Movements</strong>
             </h5>
           </div>
           <div class="card-body">
@@ -93,14 +85,14 @@
                 <thead>
                   <tr>
                     <th scope="col"></th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Clase</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Class</th>
                     <th scope="col">PP</th>
-                    <th scope="col">Potencia</th>
-                    <th scope="col">Descripcion</th>
+                    <th scope="col">Power</th>
+                    <th scope="col">Description</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="infoMov">
                 </tbody>
               </table>
             </div>
