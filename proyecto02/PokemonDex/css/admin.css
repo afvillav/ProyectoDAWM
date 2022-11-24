@@ -42,3 +42,16 @@ body {
   display: flex;
   justify-content: center;
 }
+
+#stats.bar {
+  height: 250px;
+  max-width: 500px;
+  margin: 0 auto;
+  --labels-size: 100px;
+}
+
+#infoPokemon{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

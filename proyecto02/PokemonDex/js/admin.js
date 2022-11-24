@@ -4,6 +4,7 @@ function mostrar(){
   var x = document.getElementById("busqueda").value.toLowerCase();
   crearTarjeta(x);
   MostraMovs(x);
+  llenarStats(x);
 }
 
 function crearTarjeta(nombre){
@@ -121,4 +122,28 @@ function infoMov(nombre){
     document.querySelector('.infoMov').innerHTML+=contenido
   })
   .catch(console.error);
+}
+
+function llenarStats(nombre){
+  var etiquetas=document.getElementById("stats").querySelectorAll("tr");
+  for(let i=0;i<stats.length;i++){
+    var borrar=etiquetas[i].querySelector("th").nextSibling;
+    borrar.remove();
+  }
+  fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
+  .then(response => response.json())
+  .then(data =>{
+    hp=data.stats[0].base_stat
+    atk=data.stats[1].base_stat
+    def=data.stats[2].base_stat
+    spatk=data.stats[3].base_stat
+    spdef=data.stats[4].base_stat
+    spd=data.stats[5].base_stat
+    stats=[hp,atk,def,spatk,spdef,spd]
+    for(let i=0;i<stats.length;i++){
+      plantilla=`<td style="--size: calc( ${stats[i]} / 255 )"><span class="data">${stats[i]}</span></td>`
+      etiquetas[i].querySelector("th").insertAdjacentHTML('afterend',plantilla)
+    }
+  })
+  .catch(console.error)
 }
