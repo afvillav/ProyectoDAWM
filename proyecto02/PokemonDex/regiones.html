@@ -13,7 +13,7 @@
   <!-- MDB -->
   <link rel="stylesheet" href="css/mdb.min.css" />
   <!-- Custom styles -->
-  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="css/regiones.css" />
   <link rel="stylesheet" href="dist/charts.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
     crossorigin="anonymous"></script>
@@ -26,10 +26,10 @@
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
       <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
-          <a href="./regiones.html" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+          <a href="./regiones.html" class="list-group-item list-group-item-action py-2 ripple active" aria-current="true">
             <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Regions</span>
           </a>
-          <a href="./index.html" class="list-group-item list-group-item-action py-2 ripple active">
+          <a href="./index.html" class="list-group-item list-group-item-action py-2 ripple ">
             <i class="fas fa-chart-area fa-fw me-3"></i><span>Pokemon</span>
           </a>
         </div>
@@ -52,12 +52,6 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/481px-Pokebola-pokeball-png-0.png" height="25" alt="" loading="lazy" />
           <h5>PokemonData</h5>
         </a>
-        <!-- Search form -->
-        <form class="d-none d-md-flex input-group w-auto my-auto">
-          <input id="busqueda" autocomplete="off" type="text" class="form-control rounded"
-            placeholder='Search Pokemon' style="min-width: 225px" />
-          <button type="button" onclick="mostrar()">Search</button>
-        </form>
       </div>
     </nav>
   </header>
@@ -68,65 +62,19 @@
     <div class="container pt-4">
       <!-- Section: Main chart -->
       <div id="infoPokemon">
-      <section id="tarjetaPoke" class="mb-4">
+      <section id="listaRegiones">
+        <label for="regiones">Escoja su region:
+            <select name="regiones" id="pokeregiones" onchange="mostrarTipo()">
+                <option value="0" selected>Escojer region</option>
+            </select>
+        </label>
       </section>
-      <section id="chartStats">
-        <div class="card-header text-center py-3">
-          <h5 class="mb-0 text-center">
-            <strong>Pokemon base stats</strong>
-          </h5>
-        </div>
-        <table class="charts-css column show-labels show-data-axes data-spacing-10 show-data-on-hover" id="stats">
-          <tr>
-            <th scope="row">Hp </th>
-          </tr>
-          <tr>
-            <th scope="row">Attack </th>
-          </tr>
-          <tr>
-            <th scope="row">Defense </th>
-          </tr>
-          <tr>
-            <th scope="row">Sp.Attack </th>
-          </tr>
-          <tr>
-            <th scope="row">Sp.Defense </th>
-          </tr>
-          <tr>
-            <th scope="row">Speed </th>
-          </tr>
+      <section id="chartTipos">
+        <table class="charts-css bar show-labels show-data-axes data-spacing-15 show-data-on-hover" id="tipos">
         </table>
       </section>
     </div>
       <!-- Section: Main chart -->
-
-      <section class="mb-4">
-        <div class="card">
-          <div class="card-header text-center py-3">
-            <h5 class="mb-0 text-center">
-              <strong>Movements</strong>
-            </h5>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-hover text-nowrap">
-                <thead>
-                  <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Class</th>
-                    <th scope="col">PP</th>
-                    <th scope="col">Power</th>
-                    <th scope="col">Description</th>
-                  </tr>
-                </thead>
-                <tbody class="infoMov">
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
       
     </div>
   </main>
@@ -134,7 +82,7 @@
   <!-- MDB -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Custom scripts -->
-  <script type="text/javascript" src="js/admin.js"></script>
+  <script type="text/javascript" src="js/regiones.js"></script>
 
 </body>
 

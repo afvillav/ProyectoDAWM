@@ -1,5 +1,3 @@
-
-
 function mostrar(){
   var x = document.getElementById("busqueda").value.toLowerCase();
   crearTarjeta(x);

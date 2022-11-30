@@ -1,0 +1,79 @@
+body {
+    background-color: #fbfbfb;
+  }
+  @media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 240px;
+    z-index: 600;
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+
+#listaRegiones{
+    display: flex;
+    justify-content: center;
+}
+
+#tipos.bar {
+    height: 250px;
+    max-width: 500px;
+    margin: 0 auto;
+    --labels-size: 100px;
+    --color-1: rgba(230, 30, 30, 0.2);
+  --color-2: rgba(230, 30, 30, 0.4);
+  --color-3: rgba(230, 30, 30, 0.5);
+  --color-4: rgba(230, 30, 30, 0.6);
+  --color-5: rgba(230, 30, 30, 1.0);
+  --color-6: rgba(230, 30, 30, 1.0);
+  --color-7: rgba(230, 30, 30, 0.8);
+  --color-8: rgba(230, 30, 30, 0.6);
+  --color-9: rgba(230, 30, 30, 0.4);
+  --color-10: rgba(230, 30, 30, 0.2);
+    /*--color-1: #808080;
+    --color-2: #cc0000;
+    --color-3: #ccccff;
+    --color-4: #b266ff;
+    --color-5: #663300;
+    --color-6: #994c00;
+    --color-7: #66cc00;
+    --color-8: #7f00ff;
+    --color-9: #e0e0e0;
+    --color-10: #ff8000;
+    --color-11: #0080ff;
+    --color-12: #00994c;
+    --color-13: #ffff00;
+    --color-14: #ff07ff;
+    --color-15: #99ffff;
+    --color-16: #6666ff;
+    --color-17: #330019;
+    --color-18: #ff99cc;*/
+}
