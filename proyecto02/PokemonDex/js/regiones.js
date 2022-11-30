@@ -3,6 +3,7 @@ window.onload=function mostrar(){
     for(let i=1; i<=8; i++){
         llenarDesplegable(i);     
     }
+    llenarTipos(1,898);
 }
 
 function mostrarTipo(){
@@ -12,8 +13,8 @@ function mostrarTipo(){
 function llenarRegion(){
     let region = document.getElementById("pokeregiones").value;
     if(region=="0"){
-        inicio=0
-        final=0
+        inicio=1
+        final=898
       }else{
         inicio=0
         final=0
