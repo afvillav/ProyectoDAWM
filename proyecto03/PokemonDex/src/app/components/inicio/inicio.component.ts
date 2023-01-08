@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -13,8 +14,12 @@ export class InicioComponent {
     enlaces.toggle()
   }
 
+  constructor(private router: Router){}
 
   onSubmit(pokemon:string) {
-    console.log('it does nothing',pokemon);
+    console.log(pokemon);
+    this.router.navigate([`/pokemon/${pokemon}`]);
   }
+
+  
 }
