@@ -1,7 +1,8 @@
 <head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></head>
 <div class="example-container">
-  <mat-toolbar color="primary">
-    <button mat-icon-button color="accent" aria-label="menu" (click)="snav.toggle()">  
+  <mat-toolbar id="barra" color="warn">
+    <img src="https://www.freeiconspng.com/uploads/file-pokeball-png-0.png" id="logoPoke">
+    <button mat-icon-button color="white" aria-label="menu" (click)="snav.toggle()">  
       <mat-icon>menu</mat-icon>  
    </button>
    <span>PokemonDex</span>
@@ -13,6 +14,8 @@
     <mat-nav-list>
     <a mat-list-item routerLink="/inicio">Inicio</a>
     <a mat-list-item routerLink="/pokemon">Pokemon</a>
+    <a mat-list-item routerLink="/region">Regiones</a>
+    <a mat-list-item routerLink="/habilidad">Habilidades</a>
    </mat-nav-list>
   </mat-drawer>
   <div id="primera">
@@ -26,4 +29,28 @@
     <mat-card><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/601px-Pokebola-pokeball-png-0.png" alt="Pokebola"></mat-card>
   </div>
   </mat-drawer-container>
+</div>
+<div id="busqueda">
+  <form>
+    <mat-form-field>
+      <mat-label>Ingrese un pokemon</mat-label>
+      <input matInput placeholder="Ex.Pikachu" #pokemon>
+    </mat-form-field>
+    <button (click)="onSubmit(pokemon.value)" class="buscar" mat-raised-button color="warn">Buscar</button>
+  </form>
+</div>
+<div id="starters">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title></mat-card-title>
+      <mat-card-subtitle>Pokemon</mat-card-subtitle>
+    </mat-card-header>
+    <img src="" alt="">
+    <mat-card-content>
+      <p></p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Ver pokemon</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

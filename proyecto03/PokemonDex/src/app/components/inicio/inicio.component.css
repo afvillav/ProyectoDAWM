@@ -1,3 +1,9 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 mat-drawer-content {
     padding: 12px;
     display: flex;
@@ -13,7 +19,7 @@ mat-drawer-content {
 
 img {
     width: 100%;
-    max-width: 250px;
+    max-width: 300px;
     height: auto;
 }
 
@@ -23,4 +29,28 @@ img {
     justify-content: center;
 }
 
+#barra img{
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+}
 
+html{
+    font-size:10px
+  }
+  @media(min-width: 400px) 
+  {
+    html{
+      font-size:14px
+    }
+}
+ #busqueda{
+    display: flex;
+    justify-content: center;
+ }
+
+#starters{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

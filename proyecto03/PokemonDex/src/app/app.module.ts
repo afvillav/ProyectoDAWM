@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,12 +10,10 @@ import { RegionComponent } from './components/region/region.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HabilidadComponent } from './components/habilidad/habilidad.component';
 
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';  
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatListModule} from '@angular/material/list';
+
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './material.module';
+
 
 @NgModule({
   declarations: [
@@ -25,17 +24,15 @@ import {MatListModule} from '@angular/material/list';
     HabilidadComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,  
-    MatButtonModule,
-    MatCardModule,
-    MatListModule,
-    BrowserAnimationsModule
+    MaterialModule,
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
