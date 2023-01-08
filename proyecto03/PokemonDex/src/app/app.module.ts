@@ -9,6 +9,13 @@ import { RegionComponent } from './components/region/region.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HabilidadComponent } from './components/habilidad/habilidad.component';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';  
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +27,12 @@ import { HabilidadComponent } from './components/habilidad/habilidad.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,  
+    MatButtonModule,
+    MatCardModule,
+    MatListModule,
     BrowserAnimationsModule
   ],
   providers: [],
