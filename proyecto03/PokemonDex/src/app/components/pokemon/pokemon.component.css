@@ -2,17 +2,22 @@
   width: 300px;
   margin: auto;
   margin-top: 20px;
-  background-color: red;
+  background-color:white
 }
 
 .header-image {
   background-size: cover;
+  background-color: white;
 }
 
-.mat-card-header{
-  background-color: white;
+.mat-mdc-card-header{
+  background-color:red;
   padding-top: 10px;
   border-radius: 10px;
+}
+
+.mat-mdc-card-content:last-child{
+  background-color:black;
 }
 
 .mat-card-title{
@@ -22,4 +27,50 @@
 
 .mat-card-subtitle{
   color: black;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+mat-drawer-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+* , *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+
+#barra img{
+  width: 100%;
+  max-width: 50px;
+  height: auto;
+}
+
+html{
+  font-size:10px
+}
+@media(min-width: 400px) 
+{
+  html{
+    font-size:14px
+  }
+}
+#busqueda{
+  display: flex;
+  justify-content: center;
+}
+
+#starters{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

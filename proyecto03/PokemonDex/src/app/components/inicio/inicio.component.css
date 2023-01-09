@@ -51,6 +51,18 @@ html{
 
 #starters{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+}
+
+#fotoPika{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#fotoBola{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
