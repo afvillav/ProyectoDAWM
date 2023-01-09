@@ -18,6 +18,14 @@
    </mat-nav-list>
   </mat-drawer>
   <mat-card class="card">
+
+    <mat-card>
+      <mat-card-content>
+        Esta es la informacion del pokemon que buscaste.
+        En esta seccion podrás ver la información de un pokemon, incluyendo sus tipos, 
+        su aspecto y otros como peso y altura
+      </mat-card-content>
+    </mat-card>
   
     <mat-card-header>
       <img mat-card-avatar class="header-image" src="{{pokemonImg}}">
@@ -27,7 +35,7 @@
   
     <img mat-card-image src="{{pokemonImg}}" alt="pokemon">
   
-    <mat-card-content>
+    <mat-card-content id="data">
       <mat-chip-listbox>
         <mat-chip color="primary">Type: {{pokemonType}} {{pokemonType2}}</mat-chip>
         <mat-chip color="primary">Height: {{pokemon.height}}</mat-chip>

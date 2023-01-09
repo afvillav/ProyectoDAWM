@@ -1,0 +1,76 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+* , *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+#primera{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#barra img{
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+}
+
+html{
+    font-size:10px
+  }
+  @media(min-width: 400px) 
+  {
+    html{
+      font-size:14px
+    }
+}
+
+#busqueda{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+ }
+
+
+#fotoPika{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#fotoBola{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h4{
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
