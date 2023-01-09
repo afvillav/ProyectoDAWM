@@ -66,3 +66,26 @@ html{
     justify-content: center;
     flex-direction: column;
 }
+
+#tarjeta{
+    text-transform: uppercase;
+}
+
+#buttonVer{
+    justify-content: center;
+}
+
+#foto{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#sub{
+    justify-content: center;
+}
+
+#tarjeta{
+    justify-content: center;
+}

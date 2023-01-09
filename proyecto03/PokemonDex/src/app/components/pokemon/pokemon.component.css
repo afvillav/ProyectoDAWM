@@ -20,13 +20,13 @@
   background-color:black;
 }
 
-.mat-card-title{
+#titulo{
   text-transform: uppercase;
-  color: black;
+  color: white;
 }
 
-.mat-card-subtitle{
-  color: black;
+#sub{
+  color: white;
 }
 
 body{
@@ -69,8 +69,3 @@ html{
   justify-content: center;
 }
 
-#starters{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
