@@ -12,6 +12,7 @@ export class PokemonComponent implements OnInit{
   pokemonImg = '';
   pokemonType = "";
   pokemonType2 = "";
+  stats:any=[];
 
   constructor(private activatedRouter: ActivatedRoute,
     private pokedataService: PokedataService) {
@@ -28,12 +29,15 @@ export class PokemonComponent implements OnInit{
   getPokemon(id:any) {
     this.pokedataService.getPokemons(id).subscribe(
       res => {
-        console.log(res);
+        this.stats=[];
         this.pokemon = res;
         this.pokemonImg = this.pokemon.sprites.front_default;
         this.pokemonType = res.types[0].type.name;
         if(res.types.length>1){
           this.pokemonType2 = res.types[1].type.name;
+        }
+        for(let i=0;i<6;i++){
+          this.stats.push(this.pokemon.stats[i].base_stat);
         }
       },
       err => {
@@ -41,5 +45,6 @@ export class PokemonComponent implements OnInit{
       }
     )
   }
+  
 
 }

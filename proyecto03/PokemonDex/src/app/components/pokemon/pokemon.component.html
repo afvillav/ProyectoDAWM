@@ -13,10 +13,20 @@
   <mat-drawer #snav class="example-sidenav" mode="side">
     <mat-nav-list>
     <a mat-list-item routerLink="/inicio">Inicio</a>
+    <a mat-list-item routerLink="/pokemon/pikachu">Pokemon</a>
     <a mat-list-item routerLink="/region">Regiones</a>
     <a mat-list-item routerLink="/habilidad">Movimientos</a>
    </mat-nav-list>
   </mat-drawer>
+  <div id="busqueda">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Ingrese un pokemon</mat-label>
+        <input matInput placeholder="Ex. Pikachu" #buscar>
+      </mat-form-field>
+      <button (click)="getPokemon(buscar.value)" class="buscar" mat-raised-button color="warn">Buscar</button>
+    </form>
+  </div>
   <mat-card class="card">
 
     <mat-card>
@@ -45,5 +55,23 @@
   
   </mat-card>
   </mat-drawer-container>
+  <div id="stats">
+    <mat-list>
+      <mat-list-item>Hp: {{stats[0]}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Attack: {{stats[1]}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Defense: {{stats[2]}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Sp.attack: {{stats[3]}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Sp.defense: {{stats[4]}}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Speed: {{stats[5]}}</mat-list-item>
+    </mat-list>
+  </div>
+
+
 </div>
+
 

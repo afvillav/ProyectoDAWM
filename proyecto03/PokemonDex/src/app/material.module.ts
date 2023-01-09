@@ -13,6 +13,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatSidenavModule,
     MatListModule,
     MatChipsModule,
+    MatDividerModule,
     MatProgressBarModule
   ],
   exports: [
@@ -46,6 +48,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatSidenavModule,
     MatListModule,
     MatChipsModule,
+    MatDividerModule,
     MatProgressBarModule
   ]
 })
