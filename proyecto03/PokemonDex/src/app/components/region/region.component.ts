@@ -12,6 +12,7 @@ export class RegionComponent implements OnInit{
   region:any="";
   cantidad=0;
   urlFoto="";
+  nombre="";
 
   selectedOption: string="";
 
@@ -35,9 +36,10 @@ export class RegionComponent implements OnInit{
   getRegions(id:any) {
     this.pokedataService.getRegions(id).subscribe(
       res => {
-        console.log(res);
         this.region=res;
         this.cantidad=this.region.pokemon_entries.length;
+        this.nombre=this.region.name;
+        this.urlFoto=`assets/imagenes/${this.nombre}.png`
       },
       err => {
         console.log(err);
