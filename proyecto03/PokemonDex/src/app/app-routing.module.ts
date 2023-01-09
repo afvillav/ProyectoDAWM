@@ -7,9 +7,9 @@ import { RegionComponent } from './components/region/region.component';
 
 const routes: Routes = [
     { path: "pokemon/:id", component: PokemonComponent },
-    { path: "habilidad", component: HabilidadComponent },
+    { path: "habilidad/:id", component: HabilidadComponent },
     { path: "inicio", component: InicioComponent },
-    { path: "region", component: RegionComponent },
+    { path: "region/:id", component: RegionComponent },
     { path: "**", redirectTo: "inicio" }
 ];
 
