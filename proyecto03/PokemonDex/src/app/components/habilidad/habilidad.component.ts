@@ -11,6 +11,14 @@ import { ActivatedRoute } from '@angular/router';
 export class HabilidadComponent implements OnInit{
 
   movimiento:any ="";
+  pp="";
+  tipo="";
+  precision="";
+  potencia="";
+  nombre="";
+  cat="";
+  urlFoto="";
+
 
   ngOnInit(): void {
   }
@@ -27,8 +35,14 @@ export class HabilidadComponent implements OnInit{
     getMoves(id:any) {
       this.MovDataService.getMoves(id).subscribe(
         res => {
-          console.log(res)
           this.movimiento = res;
+          this.tipo=this.movimiento.type.name;
+          this.pp=this.movimiento.pp;
+          this.precision=this.movimiento.accuracy;
+          this.potencia=this.movimiento.power;
+          this.nombre=this.movimiento.name;
+          this.cat=this.movimiento.damage_class.name;
+          this.urlFoto=`assets/tipos/${this.tipo}.png`;
         },
         err => {
           console.log(err);
