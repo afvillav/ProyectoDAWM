@@ -18,6 +18,10 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>Number</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>Phone</th>
+                        <th>Postal Code</th>
                     </tr>
                 </thead>
                 <tbody>  
@@ -25,10 +29,13 @@
                       <tr>
                         <td><%= idx %></td>  
                         <td><%= customer.customerName %></td>  
-                        <td><%= customer.customerNumber %></td>   
+                        <td><%= customer.customerNumber %></td>
+                        <td><%= customer.contactLastName %></td>
+                        <td><%= customer.contactFirstName %></td>   
+                        <td><%= customer.phone %></td> 
+                        <td><%= customer.postalCode %></td> 
                         <td>  
                             <a href="#" class="settings" title="Settings" data-toggle="tooltip"><i class="material-icons">&#xE8B8;</i></a>  
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>  
                         </td>  
                       </tr>  
                     <% }); %>  
